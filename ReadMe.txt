@@ -1,0 +1,4 @@
+-Commits de Emmanuel :  1/Agregar fantasma en el juego de pacman. 2/ Agregar el color amarillo en el juego de paint.
+-Commits de Mikel:  1/Cambiar el mapa en el juego de pacman. 2/ Agregar la forma de un pentagono en el juego de paint.
+-Commits de Diego: 1/Cambio la velocidad de los fantasmas en el juego de pacman. 2/Agrego la forma del circulo en el juego de paint.
+-Merge final , es decir juntar las branches de cada quien en la branch principal.
