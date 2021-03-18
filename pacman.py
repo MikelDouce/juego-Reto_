@@ -18,13 +18,13 @@ state = {'score': 0}
 path = Turtle(visible=False)
 writer = Turtle(visible=False)
 aim = vector(5, 0)
-pacman = vector(-40, -80)
+"Change the values to change pacman's starting position."
+pacman = vector(-40, 0)
 ghosts = [
     [vector(-180, 160), vector(5, 0)],
     [vector(-180, -160), vector(0, 5)],
     [vector(100, 160), vector(0, -5)],
     [vector(100, -160), vector(-5, 0)]
-    
 ]
 tiles = [
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -132,7 +132,9 @@ def move():
                 vector(5, 0),
                 vector(-5, 0),
                 vector(0, 5),
-                vector(0, -5)
+                vector(0, -5),
+                vector(0, -5),
+
             ]
             plan = choice(options)
             course.x = plan.x
@@ -148,7 +150,8 @@ def move():
         if abs(pacman - point) < 20:
             return
 
-    ontimer(move, 100)
+    "Change value to adjust game speed. Less is more."
+    ontimer(move, 50)
 
 def change(x, y):
     "Change pacman aim if valid."

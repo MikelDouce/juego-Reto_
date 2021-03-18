@@ -35,7 +35,15 @@ def square(start, end):
 
 def circle(start, end):
     "Draw circle from start to end."
-    pass  # TODO
+    t = turtle.Turtle()
+    t.up()
+    t.goto(start.x, start.y)
+    t.down()
+    t.begin_fill()
+
+    t.circle(end.x - start.x)
+
+    t.end_fill()
 
 def pentagono(start, end):
     "Draw rectangle from start to end."
@@ -43,9 +51,21 @@ def pentagono(start, end):
     goto(start.x, start.y)
     down()
     begin_fill()
+    
     for count in range(4):
         forward(end.x - start.x)
         left(70)
+
+
+    forward(end.x - start.x)
+    left(90)
+    forward((end.x - start.x)*1.5)
+    left(90)
+    forward(end.x - start.x)
+    left(90)
+    forward((end.x - start.x) * 1.5)
+    left(90)
+
 
     end_fill()
 
@@ -79,6 +99,7 @@ onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
+onkey(lambda: color('yellow'), 'Y')
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
