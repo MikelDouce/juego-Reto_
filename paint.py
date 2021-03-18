@@ -45,12 +45,17 @@ def circle(start, end):
 
     t.end_fill()
 
-def rectangle(start, end):
+def pentagono(start, end):
     "Draw rectangle from start to end."
     up()
     goto(start.x, start.y)
     down()
     begin_fill()
+    
+    for count in range(4):
+        forward(end.x - start.x)
+        left(70)
+
 
     forward(end.x - start.x)
     left(90)
@@ -60,6 +65,7 @@ def rectangle(start, end):
     left(90)
     forward((end.x - start.x) * 1.5)
     left(90)
+
 
     end_fill()
 
@@ -97,6 +103,6 @@ onkey(lambda: color('yellow'), 'Y')
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
-onkey(lambda: store('shape', rectangle), 'r')
+onkey(lambda: store('shape', pentagone), 'r')
 onkey(lambda: store('shape', triangle), 't')
 done()
