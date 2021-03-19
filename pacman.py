@@ -2,11 +2,9 @@
 
 Exercises
 
-1. Change the board.
-2. Change the number of ghosts.
-3. Change where pacman starts.
-4. Make the ghosts faster/slower.
-5. Make the ghosts smarter.
+1. Change the board.-Mikel Doucet
+2. Change the number of ghosts.-Emmanuel Alain Ibanes Gutierrez
+3. Changed where pacman starts and game speed. -Diego Corrales
 
 """
 
